@@ -26,7 +26,7 @@ abstract class abstractPerson {
     }
 
     public void setPersonName(String personName) {
-        if(personName.equalsIgnoreCase("ISA") && !personName.contains("Sadza")){
+        if(!personName.equalsIgnoreCase("ISA") && !personName.contains("Sadza")){
             this.personName = personName;
         }else {
             System.out.println("Please enter a valid Name");
@@ -55,7 +55,7 @@ abstract class abstractPerson {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         abstractPerson person;
 
         System.out.println("Enter your Name: ");
@@ -67,7 +67,7 @@ abstract class abstractPerson {
         System.out.println("Enter your Age: ");
         int a = scanner.nextInt();
 
-        System.out.println("Are you a Student or Lecturer (S/T)? ");
+        System.out.println("Are you a Student or Lecturer (S/L)? ");
         char p = scanner.nextLine().charAt(0);
 
         switch (p){
@@ -91,7 +91,7 @@ abstract class abstractPerson {
     }
 }
 class Student extends abstractPerson{
-    private String studentId;
+    private final String studentId;
 
     public Student(int personAge, char personGender, String personName, String studentId){
         super(personName, personAge, personGender);
@@ -108,7 +108,7 @@ class Student extends abstractPerson{
 }
 
 class Lecturer extends abstractPerson{
-    private String subject;
+    private final String subject;
 
     public Lecturer(int personAge, char personGender, String personName, String subject){
         super(personName, personAge, personGender);
