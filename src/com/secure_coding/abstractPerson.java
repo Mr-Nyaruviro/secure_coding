@@ -55,6 +55,7 @@ abstract class abstractPerson {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        
         abstractPerson person;
 
         System.out.println("Enter your Name: ");
