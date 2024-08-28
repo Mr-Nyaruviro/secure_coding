@@ -99,6 +99,13 @@ class Student extends abstractPerson{
         this.studentId = studentId;
     }
 
+    /*
+    The @Override annotation is used to indicate that this method is
+    intended to override a method from a superclass or interface.
+
+    It helps prevent accidental method overloads and improves
+    code maintainability by making it clear that the method is overriding an existing one.
+     */
     @Override
     public void display(){
         System.out.println("Student Name: " + getPersonName());
