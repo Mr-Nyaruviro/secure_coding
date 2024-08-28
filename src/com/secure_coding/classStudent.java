@@ -8,14 +8,17 @@ classStudent is Encapsulated for:
     Enhancement
     Modularity
  */
+
 public class classStudent {
 //    We have used private members to implement data hiding
-//    This is a Tightly Encapsulated Class
+//    This is a Tightly Encapsulated Class because it has all private methods
     private int studentAge;
     private char studentGender;
     private String studentName;
 
+    // Getters and Setters for updating the Methods
     public String getStudentName() {
+        //validations
         return studentName;
     }
 
@@ -28,8 +31,9 @@ public class classStudent {
     }
 
     public void setStudentName(String studentName) {
-        if(studentName.equalsIgnoreCase("ISA") && !studentName.contains("Sadza")){
-            this.studentName = studentName;
+        //validations
+        if(!studentName.equalsIgnoreCase("ISA") && !studentName.contains("Sadza")){
+            this.studentName = studentName; //Refer
         }else {
             System.out.println("Please enter a valid Name");
         }
@@ -51,12 +55,14 @@ public class classStudent {
         }
     }
 
+    //constructor
     public classStudent(String studentName, int studentAge, char studentGender){
         this.studentAge = studentAge;
         this.studentName = studentName;
         this.studentGender = studentGender;
     }
 
+    //Method
     public void display(){
         System.out.println("Student Name: " + studentName);
         System.out.println("Student Age: " + studentAge);
