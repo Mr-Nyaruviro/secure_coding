@@ -91,6 +91,7 @@ abstract class abstractPerson {
     }
 }
 class Student extends abstractPerson{
+    // By making studentId final, you ensure that the student's identity remains consistent and cannot be accidentally modified.
     private final String studentId;
 
     public Student(int personAge, char personGender, String personName, String studentId){
