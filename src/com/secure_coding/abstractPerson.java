@@ -67,7 +67,7 @@ abstract class abstractPerson {
         System.out.println("Enter your Age: ");
         int a = scanner.nextInt();
 
-        System.out.println("Are you a Student or Lecturer (S/L)? ");
+        System.out.println("Are you a Student or HLecturer (S/L)? ");
         char p = scanner.nextLine().charAt(0);
 
         switch (p){
@@ -77,7 +77,7 @@ abstract class abstractPerson {
                 person = new Student(a, g, n, studentId);
                 break;
             case 'L':
-                System.out.println("Enter Lecturer ID: ");
+                System.out.println("Enter HLecturer ID: ");
                 String subject = scanner.nextLine();
                 person = new Lecturer(a, g, n, subject);
                 break;
@@ -125,9 +125,9 @@ class Lecturer extends abstractPerson{
 
     @Override
     public void display(){
-        System.out.println("Lecturer Name: " + getPersonName());
-        System.out.println("Lecturer Age: " + getPersonAge());
-        System.out.println("Lecturer Gender: " + getPersonGender());
-        System.out.println("Lecturer Subject: " + subject);
+        System.out.println("HLecturer Name: " + getPersonName());
+        System.out.println("HLecturer Age: " + getPersonAge());
+        System.out.println("HLecturer Gender: " + getPersonGender());
+        System.out.println("HLecturer Subject: " + subject);
     }
 }
